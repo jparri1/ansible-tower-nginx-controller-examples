@@ -1,0 +1,12 @@
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Retrieve the NGINX Controller auth token
+      include_role:
+        name: nginxinc.nginx_controller_generate_token
+      vars:
+        nginx_controller_user_email: "azureuser@gmf.com
+        nginx_controller_user_password: "7h@n05!"
+        nginx_controller_fqdn: "10.216.8.16"
+        nginx_controller_validate_certs: false
