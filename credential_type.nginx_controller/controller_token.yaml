@@ -7,6 +7,6 @@
         name: nginxinc.nginx_controller_generate_token
       vars:
         nginx_controller_user_email: "azureuser@gmf.com
-        nginx_controller_user_password: ""
+        nginx_controller_user_password: "{{nginxControllerUserPassword}}"
         nginx_controller_fqdn: "10.216.8.16"
         nginx_controller_validate_certs: false
