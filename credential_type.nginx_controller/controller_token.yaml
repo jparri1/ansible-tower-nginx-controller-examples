@@ -1,9 +1,6 @@
 - hosts: localhost
   gather_facts: no
 
-collections:
-- name: nginxinc.nginx_controller
-
   tasks:
     - name: Retrieve the NGINX Controller auth token
       include_role:
