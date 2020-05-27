@@ -1,4 +1,4 @@
-- hosts: nginx_controller
+hosts: all
 - collections:
 - name: nginxinc.nginx_controller
 
