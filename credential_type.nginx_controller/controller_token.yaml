@@ -1,6 +1,6 @@
-- hosts: all
-- collections:
-- name: nginxinc.nginx_controller
+- hosts: localhost
+#- collections:
+#- name: nginxinc.nginx_controller
 
   tasks:
     - name: Retrieve the NGINX Controller auth token
