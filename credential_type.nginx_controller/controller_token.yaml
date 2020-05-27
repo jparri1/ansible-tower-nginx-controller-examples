@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: nginx_controller
 #- collections:
 #- name: nginxinc.nginx_controller
 
