@@ -1,3 +1,4 @@
+
 ---
 - hosts: all
 
@@ -5,6 +6,8 @@
     - nginxinc.nginx_controller
   tasks:
     - name: Retrieve the NGINX Controller auth token
+      include_role:
+        name: nginx_controller_generate_token
       vars:
         nginx_controller_user_email: azureuser@gmf.com
         nginx_controller_user_password: 7h@n05!
