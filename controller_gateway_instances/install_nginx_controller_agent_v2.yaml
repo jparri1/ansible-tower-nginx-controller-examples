@@ -17,13 +17,13 @@
     - name: Get controller api key for agent registration
       uri:
         url: "https://{{ nginx_controller_fqdn }}/api/v1/platform/global"
-         method: "GET"
-         return_content: yes
-         status_code: 200
-         validate_certs: false
-         headers:
+        method: "GET"
+        return_content: yes
+        status_code: 200
+        validate_certs: false
+        headers:
            Cookie: "{{nginx_controller_auth_token}}"
-       register: ctrl_globals
+        register: ctrl_globals
 
      - name: Copy api_key to a variable
        set_fact:
