@@ -2,10 +2,14 @@
   gather_facts: no
 
   vars:
-    nginx_controller_user_email: "user@example.com"
-    nginx_controller_user_password: "mySecurePassword"
-    nginx_controller_fqdn: "controller.mydomain.com"
-    nginx_controller_validate_certs: false
+    vars:
+    nginx_controller_user_email: azureuser@gmf.com
+    nginx_controller_user_password: "{{ controller_pass}}"
+    nginx_controller_fqdn: "{{ nginx_controller_fqdn }}"
+    nginx_controller_auth_token:
+    
+    collections:
+    - nginxinc.nginx_controller
 
   tasks:
     - name: Retrieve the NGINX Controller auth token
