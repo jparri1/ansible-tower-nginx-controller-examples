@@ -26,7 +26,7 @@
         register: ctrl_globals
 
     - name: Copy api_key to a variable
-       set_fact:
+      set_fact:
         api_key: "{{ctrl_globals.json.currentStatus.agentSettings.apiKey}}"
 
 - hosts: api_gw_2
