@@ -25,7 +25,7 @@
            Cookie: "{{nginx_controller_auth_token}}"
         register: ctrl_globals
 
-     - name: Copy api_key to a variable
+    - name: Copy api_key to a variable
        set_fact:
        api_key: "{{ctrl_globals.json.currentStatus.agentSettings.apiKey}}"
 
@@ -45,8 +45,8 @@
             - python-minimal
             - libxerces-c3.2
 
-    - name: install the agent
+   - name: install the agent
       include_role:
-           name: nginxinc.nginx_controller_agent
-            vars:
-              nginx_controller_api_key: "{{ hostvars['localhost']['api_key'] }}"
+        name: nginxinc.nginx_controller_agent
+        vars:
+           nginx_controller_api_key: "{{ hostvars['localhost']['api_key'] }}"
