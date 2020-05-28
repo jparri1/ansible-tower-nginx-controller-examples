@@ -12,8 +12,17 @@
         nginx_controller_user_email: azureuser@gmf.com
         nginx_controller_user_password: "{{ controller_pass}}"
         nginx_controller_fqdn: "{{ nginx_controller_fqdn }}"
-        
+
+- hosts: all
+
+collections:
+    - nginxinc.nginx_controller
+  
+  tasks:
     - name: Get controller api key for agent registration
+      include_role:
+        name: nginxinc.nginx_controller_generate_token
+    
       uri:
         url: "https://{{ nginx_controller_fqdn }}/api/v1/platform/global"
         method: "GET"
@@ -27,6 +36,9 @@
     - name: Copy api_key to a variable
       set_fact:
         api_key: "{{ctrl_globals.json.currentStatus.agentSettings.apiKey}}"
+
+
+
 
 - hosts: 10.216.8.17
   remote_user: azureuser
