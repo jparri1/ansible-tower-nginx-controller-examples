@@ -5,7 +5,7 @@
 
   tasks:
   - include_role:
-      name: nginxinc.nginx_controller.nginx_controller_generate_token
+      name: nginxinc.nginx_controller_generate_token
 
   - name: Get controller api key for agent registration
     uri:
@@ -40,7 +40,7 @@
 
   - name: install the agent
     include_role:
-      name: nginxinc.nginx_controller.nginx_controller_agent
+      name: nginxinc.nginx_controller_generate_token
     vars:
       nginx_controller_hostname: "{{ ansible_facts['fqdn'] }}"
       nginx_controller_api_key: "{{ hostvars['localhost']['api_key'] }}"
