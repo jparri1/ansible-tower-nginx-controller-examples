@@ -5,6 +5,7 @@
     nginx_controller_user_email: azureuser@gmf.com
     nginx_controller_user_password: "{{ controller_pass}}"
     nginx_controller_fqdn: "{{ nginx_controller_fqdn }}"
+    nginx_controller_auth_token:
     
 collections:
     - nginxinc.nginx_controller
