@@ -12,7 +12,7 @@
         nginx_controller_user_email: azureuser@gmf.com
         nginx_controller_user_password: "{{ controller_pass}}"
         nginx_controller_fqdn: "{{ nginx_controller_fqdn }}"
-
+  tasks:
     - name: Get controller api key for agent registration
       uri:
         url: "https://{{ nginx_controller_fqdn }}/api/v1/platform/global"
