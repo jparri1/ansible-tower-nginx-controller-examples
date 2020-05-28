@@ -1,5 +1,5 @@
 ---
-- hosts: 10.216.8.16
+- hosts: all
 
   collections:
     - nginxinc.nginx_controller
