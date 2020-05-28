@@ -12,4 +12,3 @@
         nginx_controller_user_email: azureuser@gmf.com
         nginx_controller_user_password: "{{ controller_pass}}"
         nginx_controller_fqdn: 10.216.8.16
-        nginx_controller_auth_token:
