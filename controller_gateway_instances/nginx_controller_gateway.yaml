@@ -21,7 +21,7 @@
         name: nginxinc.nginx_controller_gateway
       vars:
         # controller.auth_token: output by previous role in example
-        nginx_controller_environmentName: "production-us-west"
+        nginx_controller_environmentName: "dev"
         nginx_controller_gateway:
           metadata:
             name: lending
