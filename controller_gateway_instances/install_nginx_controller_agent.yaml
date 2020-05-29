@@ -28,7 +28,7 @@
 
 - hosts: localhost
   become: yes
-  sudo: yes
+  become_method: sudo
   gather_facts: false
 
   tasks:
