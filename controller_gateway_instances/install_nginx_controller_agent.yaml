@@ -27,9 +27,6 @@
       nginx_controller_api_key: "{{nginx_controller_globals.json.currentStatus.agentSettings.apiKey}}"
 
 - hosts: localhost
-  become: yes
-  become_method: sudo
-  gather_facts: false
 
   tasks:
   
