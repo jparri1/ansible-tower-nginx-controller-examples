@@ -4,6 +4,10 @@
   tasks:
   - include_role:
       name: nginxinc.nginx_controller_generate_token
+    vars:
+        nginx_controller_user_email: azureuser@gmf.com
+        nginx_controller_user_password: "{{ controller_pass }}"
+        nginx_controller_fqdn: "{{ nginx_controller_fqdn }}"
 
   - name: Get controller api key for agent registration
     uri:
