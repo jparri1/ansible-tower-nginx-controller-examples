@@ -20,7 +20,7 @@
       validate_certs: false
       headers:
         Cookie: "{{ nginx_controller_auth_token }}"
-      register: nginx_controller_globals
+    register: nginx_controller_globals
 
   - name: Copy api_key to a variable
     set_fact:
