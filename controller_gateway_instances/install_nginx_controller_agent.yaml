@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   gather_facts: false
   connection: local
 
@@ -26,9 +26,8 @@
     set_fact:
       nginx_controller_api_key: "{{nginx_controller_globals.json.currentStatus.agentSettings.apiKey}}"
 
-- hosts: all
-  remote_user: azureuser
-  become: true
+- hosts: localhost
+  become: yes
   become_method: sudo
   gather_facts: yes
 
