@@ -1,5 +1,7 @@
 ---
 - hosts: all
+  gather_facts: false
+  connection: local
 
   tasks:
   - include_role:
@@ -19,7 +21,7 @@
       headers:
         Cookie: "{{ nginx_controller_auth_token }}"
     register: nginx_controller_globals
-/*
+
   - name: Copy api_key to a variable
     set_fact:
       nginx_controller_api_key: "{{nginx_controller_globals.json.currentStatus.agentSettings.apiKey}}"
@@ -46,4 +48,3 @@
     vars:
       nginx_controller_hostname: "{{ ansible_facts['fqdn'] }}"
       nginx_controller_api_key: "{{ hostvars['localhost']['api_key'] }}"
-*/
