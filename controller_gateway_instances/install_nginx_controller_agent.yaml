@@ -46,5 +46,5 @@
     include_role:
       name: nginxinc.nginx_controller_agent
     vars:
-      nginx_controller_hostname: "{{ ansible_facts['fqdn'] }}"
+      nginx_controller_fqdn: "{{ nginx_controller_fqdn }}"
       nginx_controller_api_key: "7ae841e42c461243a3bb798910cb4a0a"
