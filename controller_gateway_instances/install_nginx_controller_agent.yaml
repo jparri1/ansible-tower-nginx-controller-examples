@@ -38,5 +38,5 @@
     include_role:
       name: nginxinc.nginx_controller_agent
     vars:
-      #nginx_controller_api_key: "7ae841e42c461243a3bb798910cb4a0a"
-      nginx_controller_api_key: "{{ hostvars['localhost']['nginx_controller_api_key'] }}"
+       nginx_controller_api_key: "7ae841e42c461243a3bb798910cb4a0a"
+      #nginx_controller_api_key: "{{ hostvars['localhost']['nginx_controller_api_key'] }}"
