@@ -27,10 +27,6 @@
       nginx_controller_api_key: "{{nginx_controller_globals.json.currentStatus.agentSettings.apiKey}}"
 
 - hosts: api-gw
-  remote_user: azureuser
-  become: true
-  become_method: sudo
-  gather_facts: true
 
   tasks:
   
