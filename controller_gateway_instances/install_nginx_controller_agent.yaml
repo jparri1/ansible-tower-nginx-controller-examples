@@ -26,7 +26,7 @@
     set_fact:
       nginx_controller_api_key: "{{nginx_controller_globals.json.currentStatus.agentSettings.apiKey}}"
 
-- hosts: api-gw2
+- hosts: api-gw
   remote_user: azureuser
   become: true
   become_method: sudo
